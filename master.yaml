@@ -38,6 +38,20 @@ paths:
               schema:
                 $ref: '#/components/schemas/CPU'
 
+  /names/<arg1>/<arg2>:
+    get:
+      tags:
+        - names
+      operationId: name.getName
+      description: Returns cpu information of the hosting server
+      responses:
+        '200':
+          description: 'CPU info, or add more text'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CPU'
+
 servers:
   - url: 'http://localhost:8080/engr-222'
 components:
